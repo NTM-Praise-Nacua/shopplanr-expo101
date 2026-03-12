@@ -1,50 +1,111 @@
-# Welcome to your Expo app 👋
+# ShopPlanr — Mobile App (Expo)
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+> A smart shopping planner that helps you organize your grocery runs, set budgets, and track your actual spending in real time.
 
-## Get started
+---
 
-1. Install dependencies
+## 📱 Screenshots
 
-   ```bash
-   npm install
-   ```
+| Home / Plans                           | Plan Details                                 | Shopping Mode                                  |
+| -------------------------------------- | -------------------------------------------- | ---------------------------------------------- |
+| ![Home](./screenshots/mobile-home.jpg) | ![Details](./screenshots/mobile-details.jpg) | ![Shopping](./screenshots/mobile-shopping.jpg) |
 
-2. Start the app
+---
 
-   ```bash
-   npx expo start
-   ```
+## ✨ Features
 
-In the output, you'll find options to open the app in a
+- 📋 **Create Shopping Plans** — Set up a plan with a store location, scheduled date, and total budget before your shopping trip.
+- 🛒 **Plan Your Items** — Add the items you intend to buy, including the planned quantity for each.
+- 📍 **Store Location** — Attach a location to each plan so you know exactly where you're headed.
+- 📅 **Scheduled Date** — Set a date for the trip so your plans are organized chronologically.
+- ✅ **Shopping Mode** — When the scheduled date arrives, activate the plan to start recording your actual purchases.
+- 💰 **Real-time Budget Tracking** — Input the actual quantity bought and the price per item; the app automatically deducts from your budget as you shop.
+- 📶 **Offline Support** — Fully functional without internet using local SQLite storage; syncs with the server when back online.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+---
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## 🛠 Tech Stack
 
-## Get a fresh project
+- **Framework:** React Native (Expo)
+- **Offline Storage:** SQLite (via expo-sqlite)
+- **Data Source:** REST API (shared with web versions)
+- **Language:** JavaScript / JSX
 
-When you're ready, run:
+---
+
+## 🚀 Setup & Installation
+
+### Prerequisites
+
+Make sure you have the following installed on your machine:
+
+- [Node.js](https://nodejs.org/) (v18 or higher recommended)
+- [Expo CLI](https://docs.expo.dev/get-started/installation/)
+    ```bash
+    npm install -g expo-cli
+    ```
+- [Expo Go](https://expo.dev/client) app installed on your phone (for testing on a physical device), **or** an Android/iOS emulator set up locally.
+
+---
+
+### Steps
+
+**1. Clone the repository**
 
 ```bash
-npm run reset-project
+git clone https://github.com/Just-Pyro/shopplanr-expo101.git
+cd shopplanr-expo101
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+**2. Install dependencies**
 
-## Learn more
+```bash
+npm install
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+**3. Configure the API base URL**
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+Serve the Blade Version:
 
-## Join the community
+```bash
+php artisan serve
+```
 
-Join our community of developers creating universal apps.
+> Please look up the Blade version for setup and installation [ShopPlanr - Blade](https://github.com/Just-Pyro/Shopplanr).
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+**4. Start the development server**
+
+```bash
+npx expo start
+```
+
+**5. Open the app**
+
+- **Physical device:** Scan the QR code in the terminal using the Expo Go app.
+- **Android emulator:** Press `a` in the terminal.
+- **iOS simulator:** Press `i` in the terminal (macOS only).
+
+---
+
+## 📁 Project Structure
+
+```
+shopplanr-expo/
+├── app/              # Screens and navigation
+├── components/       # Reusable UI components
+├── services/         # API & Database (SQLite) call functions
+└── assets/           # Images and fonts
+```
+
+---
+
+## 🔗 Related Repositories
+
+- [ShopPlanr — React Web](https://github.com/Just-Pyro/ShopPlanr-web)
+- [ShopPlanr — Laravel Blade](https://github.com/Just-Pyro/Shopplanr)
+
+---
+
+## 📄 License
+
+This project is for portfolio purposes.
