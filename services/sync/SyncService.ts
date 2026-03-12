@@ -274,7 +274,7 @@ export async function runSync() {
                             placeholders.push("(?,?,?,?,?,?,?,?)");
                             values.push(
                                 item.id,
-                                plan.id,
+                                local.id,
                                 item.name,
                                 item.price,
                                 item.expected_quantity,

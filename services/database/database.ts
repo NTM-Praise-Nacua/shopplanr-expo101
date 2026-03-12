@@ -409,7 +409,8 @@ export const showShopPlan = async (
             shop_plan_id,
         );
 
-        if (!shop_plan_items) throw new Error("Item Lists not found");
+        if (!shop_plan_items || shop_plan_items.length <= 0)
+            throw new Error("Item Lists not found");
 
         return {
             shop_plan_info: shop_plan_info,
